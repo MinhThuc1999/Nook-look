@@ -255,7 +255,7 @@ img {
 }
 
 .header__inner .header__inner--cart .view-cart .btn {
-    background: url('http://html.lionode.com/nature/n-look/image/sprite.png') no-repeat scroll;
+    background: url('../image/icon-cart.png') no-repeat scroll;
     background-position: 0px 0px;
     border: none;
     min-height: 50px;
@@ -491,7 +491,7 @@ img {
 .main-introduce {
     margin-top: 100px;
     height: 650px;
-    background: url('http://html.lionode.com/nature/n-look/image/prlx.jpg') no-repeat;
+    background: url('../image/introduct.jpg') no-repeat;
     background-size: cover;
     background-position-y: -30px;
     display: flex;
