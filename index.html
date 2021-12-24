@@ -9,6 +9,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/share.css">
@@ -17,8 +19,11 @@
 </head>
 
 <body>
+    <div class="loader">
+        <img src="image/loader.gif" alt="">
+    </div>
     <header class="header">
-        
+
         <div class="header__top">
             <div class="container">
                 <div class="header__top--left">
@@ -26,15 +31,16 @@
                         Welcome to our online store!
                     </div>
                     <ul class="top__left--langguage-pay">
-                        <li>
+                        <li class="top__left--langguage">
                             <a href="#">English <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                            <ul class="langguage">
+                            <ul class="langguage hide">
                                 <li><a href="#">Arabic</a></li>
                                 <li><a href="#">English</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">USD <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                            <ul>
+                        <li class="top__left--unit">
+                            <a href="#">USD <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                            <ul class="unit hide">
                                 <li><a href="#">EURO</a></li>
                                 <li><a href="#">POUND</a></li>
                                 <li><a href="#">USD</a></li>
@@ -46,13 +52,14 @@
                 <div class="header__top--right">
                     <div class="top__right--account-wish">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> <span>My Account</span> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                                <ul>
+                            <li class="toggle-account"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>My Account</span> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                <ul class="account hide">
                                     <li><a href="#">Regiter</a></li>
                                     <li><a href="#">Login</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i><span> Wish List (0)  </a></li>
+                            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i><span> Wish List (0) </a></li>
                         </ul>
                     </div>
                     <div class="top__right--search">
@@ -78,7 +85,7 @@
                     </div>
                     <input type="checkbox" name="" id="toggle-menu">
                     <div class="col-lg-6 col-sm-12 col-xs-12 header__inner--menu">
-                     
+
                         <ul class="primary-menu">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Spa</a></li>
@@ -112,7 +119,7 @@
 
                         </div>
                         <button class="show-cart" type="button"></button>
-                            <label for="action-toggle"></label>
+                        <label for="action-toggle"></label>
                         </button>
                         <input type="checkbox" name="" id="action-toggle">
                         <div class="block-cart">
@@ -202,8 +209,10 @@
             </div>
         </div>
         <!--end header__inner-->
-        <div class="header__slide-banner">
+        <div class="header__slide-banner owl-carousel owl-theme">
             <p><img src="image/Main-Banner3.jpg" alt=""></p>
+            <p><img src="image/Main-Banner1.jpg" alt=""></p>
+            <p><img src="image/Main-Banner2.jpg" alt=""></p>
         </div>
         <!--end header__slide-banner-->
 
@@ -231,7 +240,7 @@
                         <p><span>Lorem ipsum dolor sit amet, consectetur <br> aditpisicing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna.
                             </span></p>
-                            <a class="btn" href="#">Read More</a>
+                        <a class="btn" href="#">Read More</a>
                     </div>
                     <div class="col-lg-4 col-xs-12 main__services--right">
                         <p><img src="image/service3.png" alt=""></p>
@@ -239,7 +248,7 @@
                         <p><span>Lorem ipsum dolor sit amet, consectetur <br> aditpisicing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna.
                             </span></p>
-                            <a class="btn" href="#">Read More</a>
+                        <a class="btn" href="#">Read More</a>
                     </div>
                 </div>
             </div>
@@ -580,24 +589,35 @@
         <!--end section main-products-->
         <section class="main-introduce">
             <div class="container">
-                <div class="main-introduce__content">
-                    <p><img src="image/avt1.png" alt=""></p>
-                    <h1>Linda Wilson</h1>
-                    <p>Web Designer</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vero dolore repellat libero beatae
-                        fuga cupiditate voluptatem ratione illo nulla quisquam, pariatur cumque, ipsum iste. Iusto
-                        accusantium ipsum quos ipsam?</p>
-                    <div class="dots">
-                        <div class="dot">
-                            <span></span>
-                        </div>
-                        <div class="dot">
-                            <span></span>
-                        </div>
-                        <div class="dot">
-                            <span></span>
-                        </div>
+                <div class="main-introduce__content owl-carousel owl-theme">
+                    <div class="main-introduce__block1">
+                        <p><img src="image/avt1.png" alt=""></p>
+                        <h1>Linda Wilson</h1>
+                        <p>Web Designer</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vero dolore repellat libero
+                            beatae
+                            fuga cupiditate voluptatem ratione illo nulla quisquam, pariatur cumque, ipsum iste. Iusto
+                            accusantium ipsum quos ipsam?</p>
                     </div>
+                    <div class="main-introduce__block1">
+                        <p><img src="image/avt2.png" alt=""></p>
+                        <h1>Linda Howard</h1>
+                        <p>Web Designer</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vero dolore repellat libero
+                            beatae
+                            fuga cupiditate voluptatem ratione illo nulla quisquam, pariatur cumque, ipsum iste. Iusto
+                            accusantium ipsum quos ipsam?</p>
+                    </div>
+                    <div class="main-introduce__block1">
+                        <p><img src="image/avt3.png" alt=""></p>
+                        <h1>Janet Wilson</h1>
+                        <p>Web Designer</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vero dolore repellat libero
+                            beatae
+                            fuga cupiditate voluptatem ratione illo nulla quisquam, pariatur cumque, ipsum iste. Iusto
+                            accusantium ipsum quos ipsam?</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -626,181 +646,794 @@
         <section class="main-seller">
             <div class="main-seller__top">
                 <div class="container">
-                
-                        <div class="main-seller__top--title">
-                            <h1>Best Seller</h1>
-                        </div>
-                        <div class="main-seller__top--tab">
-                            <ul>
-                                <li><a class="active" href="#">Skincare</a></li>
-                                <li><a href="#">Haircare</a></li>
-                                <li><a href="#">Cosmetics Cases</a></li>
-                                <li><a href="#">Fragrance</a></li>
-                                <li><a href="#">Makeup</a></li>
-                            </ul>
-                        </div>          
+
+                    <div class="main-seller__top--title">
+                        <h1>Best Seller</h1>
+                    </div>
+                    <div class="main-seller__top--tab">
+                        <ul>
+                            <li><a class="active" href="#skincare">Skincare</a></li>
+                            <li><a href="#haircare">Haircare</a></li>
+                            <li><a href="#cosmetics">Cosmetics Cases</a></li>
+                            <li><a href="#fragrance">Fragrance</a></li>
+                            <li><a href="#makeup">Makeup</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!--end main-seller__top -->
             <div class="main-seller__bottom">
-                <div class="list-post">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-xs-6 list-item">
-                                <div class="list-item__image-product">
-                                    <a><img src="image/product1-1.jpg" alt=""></a>
-                                    <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
-                                    <div class="btn-action">
-                                        <ul>
-                                            <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
-                                                </a></li>
-                                        </ul>
-                                        <button type="button">Add to Cart</button>
+
+                <div class="container">
+                    <div class="list-post">
+                        <div class="tab-content active" id="skincare">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product1-1.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--end list-item__image-product -->
-                                <div class="list-item__thumbnail">
-                                    <div class="starts">
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
                                     </div>
-                                    <a>
-                                        <p class="text">Casual Shirt With Ruffle Hem</p>
-                                    </a>
-                                    <span>$122.00</span>
+                                    <!--end list-item__thumbnail -->
                                 </div>
-                                <!--end list-item__thumbnail -->
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product4.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product4-4.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product5.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product5-5.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product1-1.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-xs-6 list-item">
-                                <div class="list-item__image-product">
-                                    <a><img src="image/product4.jpg" alt=""></a>
-                                    <a class="img2" href="#"><img src="image/product4-4.jpg" alt=""></a>
-                                    <div class="btn-action">
-                                        <ul>
-                                            <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
-                                                </a></li>
-                                        </ul>
-                                        <button type="button">Add to Cart</button>
+                        </div>
+                        <div class="tab-content " id="haircare">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product2-2.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product3-3.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--end list-item__image-product -->
-                                <div class="list-item__thumbnail">
-                                    <div class="starts">
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
                                     </div>
-                                    <a>
-                                        <p class="text">Casual Shirt With Ruffle Hem</p>
-                                    </a>
-                                    <span>$122.00</span>
+                                    <!--end list-item__thumbnail -->
                                 </div>
-                                <!--end list-item__thumbnail -->
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product8.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product8-8.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product9.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product9-9.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product1-1.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-xs-6 list-item">
-                                <div class="list-item__image-product">
-                                    <a><img src="image/product5.jpg" alt=""></a>
-                                    <a class="img2" href="#"><img src="image/product5-5.jpg" alt=""></a>
-                                    <div class="btn-action">
-                                        <ul>
-                                            <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
-                                                </a></li>
-                                        </ul>
-                                        <button type="button">Add to Cart</button>
+                        </div>
+                        <div class="tab-content " id="cosmetics">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product1.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product1-1.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--end list-item__image-product -->
-                                <div class="list-item__thumbnail">
-                                    <div class="starts">
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
                                     </div>
-                                    <a>
-                                        <p class="text">Casual Shirt With Ruffle Hem</p>
-                                    </a>
-                                    <span>$122.00</span>
+                                    <!--end list-item__thumbnail -->
                                 </div>
-                                <!--end list-item__thumbnail -->
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product6.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product6-6.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product5.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product5-5.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product3.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product2.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-xs-6 list-item">
-                                <div class="list-item__image-product">
-                                    <a><img src="image/product1-1.jpg" alt=""></a>
-                                    <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
-                                    <div class="btn-action">
-                                        <ul>
-                                            <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
-                                                </a></li>
-                                            <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
-                                                </a></li>
-                                        </ul>
-                                        <button type="button">Add to Cart</button>
+                        </div>
+                        <div class="tab-content " id="fragrance">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product5.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product5-5.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--end list-item__image-product -->
-                                <div class="list-item__thumbnail">
-                                    <div class="starts">
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </span>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
                                     </div>
-                                    <a>
-                                        <p class="text">Casual Shirt With Ruffle Hem</p>
-                                    </a>
-                                    <span>$122.00</span>
+                                    <!--end list-item__thumbnail -->
                                 </div>
-                                <!--end list-item__thumbnail -->
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product8.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product8-8.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product7.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product7-7.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product1-1.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="haircare">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product9.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product9-9.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product6.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product6-6.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product3.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product3-3.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
+                                <div class="col-lg-3 col-xs-6 list-item">
+                                    <div class="list-item__image-product">
+                                        <a><img src="image/product1-1.jpg" alt=""></a>
+                                        <a class="img2" href="#"><img src="image/product1.jpg" alt=""></a>
+                                        <div class="btn-action">
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </a></li>
+                                                <li><a href=""><i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a></li>
+                                            </ul>
+                                            <button type="button">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--end list-item__image-product -->
+                                    <div class="list-item__thumbnail">
+                                        <div class="starts">
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="dot active"><i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <a>
+                                            <p class="text">Casual Shirt With Ruffle Hem</p>
+                                        </a>
+                                        <span>$122.00</span>
+                                    </div>
+                                    <!--end list-item__thumbnail -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="controls">
-                        <div class="controls__button">
-                            <a class="controls__button--prev-left" href="#"></a>
-                            <a class="controls__button--prev-right" href="#"></a>
-                        </div>
+
+
+                </div>
+                <div class="controls">
+                    <div class="controls__button">
+                        <a class="controls__button--prev-left" href="#"></a>
+                        <a class="controls__button--prev-right" href="#"></a>
                     </div>
                 </div>
                 <!--end list-post -->
@@ -818,85 +1451,137 @@
             </div>
             <!--end main-blog__top-->
             <div class="main-blog__bottom">
-                <div class="main-blog__bottom--list-blog">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-xs-12 block-blog">
-                                <div class="block-blog__top">
-                                    <div class="blog-img">
-                                        <p><img src="image/img-blog1.jpg" alt=""></p>
-                                        <p class="img-hover"></p>
-                                        <p class="date">02/05/2016</p>
+                    <div class="main-blog__bottom--list-blog owl-carousel owl-theme">
+                        
+                                <div class="block-blog">
+                                    <div class="block-blog__top">
+                                        <div class="blog-img">
+                                            <p><img src="image/img-blog1.jpg" alt=""></p>
+                                            <p class="img-hover"></p>
+                                            <p class="date">02/05/2016</p>
+                                        </div>
+                                        <div class="blog-title">
+                                            <h3>
+                                                <a href="#">Handful of model sentence of model sentence of model
+                                                    structures</a>
+                                            </h3>
+                                        </div>
+                                        <div class="blog-author">
+                                            <p>By <a href="#">mark grage</a></p>
+                                            <p>3Comments</p>
+                                        </div>
                                     </div>
-                                    <div class="blog-title">
-                                        <h3>
-                                            <a href="#">Handful of model sentence of model sentence of model
-                                                structures</a>
-                                        </h3>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>By <a href="#">mark grage</a></p>
-                                        <p>3Comments</p>
-                                    </div>
-                                </div>
-                                <div class="block-blog__bot">
-                                    <p class="content">There are many variations of passages of Lorem Ipsum available,
-                                        but the majority have suffered alteration in some look even slightly believable.
-                                    </p>
-                                    <button type="button"><span>Read more</span></button>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-xs-12 block-blog">
-                                <div class="block-blog__top">
-                                    <div class="blog-img">
-                                        <p><img src="image/blog_2.jpg" alt=""></p>
-                                        <p class="img-hover"></p>
-                                        <p class="date">02/05/2016</p>
-                                    </div>
-                                    <div class="blog-title">
-                                        <h3>
-                                            <a href="#">Handful of model sentence of model sentence of model
-                                                structures</a>
-                                        </h3>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>By <a href="#">mark grage</a></p>
-                                        <p>3Comments</p>
+                                    <div class="block-blog__bot">
+                                        <p class="content">There are many variations of passages of Lorem Ipsum available,
+                                            but the majority have suffered alteration in some look even slightly believable.
+                                        </p>
+                                        <button type="button"><span>Read more</span></button>
                                     </div>
                                 </div>
-                                <div class="block-blog__bot">
-                                    <p class="content">There are many variations of passages of Lorem Ipsum available,
-                                        but the majority have suffered alteration in some look even slightly believable.
-                                    </p>
-                                    <button type="button"><span>Read more</span></button>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-xs-12 block-blog">
-                                <div class="block-blog__top">
-                                    <div class="blog-img">
-                                        <p><img src="image/blog_3.jpg" alt=""></p>
-                                        <p class="img-hover"></p>
-                                        <p class="date">02/05/2016</p>
+                                <div class=" block-blog">
+                                    <div class="block-blog__top">
+                                        <div class="blog-img">
+                                            <p><img src="image/blog_2.jpg" alt=""></p>
+                                            <p class="img-hover"></p>
+                                            <p class="date">02/05/2016</p>
+                                        </div>
+                                        <div class="blog-title">
+                                            <h3>
+                                                <a href="#">Handful of model sentence of model sentence of model
+                                                    structures</a>
+                                            </h3>
+                                        </div>
+                                        <div class="blog-author">
+                                            <p>By <a href="#">mark grage</a></p>
+                                            <p>3Comments</p>
+                                        </div>
                                     </div>
-                                    <div class="blog-title">
-                                        <h3>
-                                            <a href="#">Handful of model sentence of model sentence of model
-                                                structures</a>
-                                        </h3>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>By <a href="#">mark grage</a></p>
-                                        <p>3Comments</p>
+                                    <div class="block-blog__bot">
+                                        <p class="content">There are many variations of passages of Lorem Ipsum available,
+                                            but the majority have suffered alteration in some look even slightly believable.
+                                        </p>
+                                        <button type="button"><span>Read more</span></button>
                                     </div>
                                 </div>
-                                <div class="block-blog__bot">
-                                    <p class="content">There are many variations of passages of Lorem Ipsum available,
-                                        but the majority have suffered alteration in some look even slightly believable.
-                                    </p>
-                                    <button type="button"><span>Read more</span></button>
+                                <div class=" block-blog">
+                                    <div class="block-blog__top">
+                                        <div class="blog-img">
+                                            <p><img src="image/blog_3.jpg" alt=""></p>
+                                            <p class="img-hover"></p>
+                                            <p class="date">02/05/2016</p>
+                                        </div>
+                                        <div class="blog-title">
+                                            <h3>
+                                                <a href="#">Handful of model sentence of model sentence of model
+                                                    structures</a>
+                                            </h3>
+                                        </div>
+                                        <div class="blog-author">
+                                            <p>By <a href="#">mark grage</a></p>
+                                            <p>3Comments</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-blog__bot">
+                                        <p class="content">There are many variations of passages of Lorem Ipsum available,
+                                            but the majority have suffered alteration in some look even slightly believable.
+                                        </p>
+                                        <button type="button"><span>Read more</span></button>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="block-blog">
+                                    <div class="block-blog__top">
+                                        <div class="blog-img">
+                                            <p><img src="image/blog_4.jpg" alt=""></p>
+                                            <p class="img-hover"></p>
+                                            <p class="date">02/05/2016</p>
+                                        </div>
+                                        <div class="blog-title">
+                                            <h3>
+                                                <a href="#">Handful of model sentence of model sentence of model
+                                                    structures</a>
+                                            </h3>
+                                        </div>
+                                        <div class="blog-author">
+                                            <p>By <a href="#">mark grage</a></p>
+                                            <p>3Comments</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-blog__bot">
+                                        <p class="content">There are many variations of passages of Lorem Ipsum available,
+                                            but the majority have suffered alteration in some look even slightly believable.
+                                        </p>
+                                        <button type="button"><span>Read more</span></button>
+                                    </div>
+                                </div>
+                                <div class="block-blog">
+                                    <div class="block-blog__top">
+                                        <div class="blog-img">
+                                            <p><img src="image/blog_5.jpg" alt=""></p>
+                                            <p class="img-hover"></p>
+                                            <p class="date">02/05/2016</p>
+                                        </div>
+                                        <div class="blog-title">
+                                            <h3>
+                                                <a href="#">Handful of model sentence of model sentence of model
+                                                    structures</a>
+                                            </h3>
+                                        </div>
+                                        <div class="blog-author">
+                                            <p>By <a href="#">mark grage</a></p>
+                                            <p>3Comments</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-blog__bot">
+                                        <p class="content">There are many variations of passages of Lorem Ipsum available,
+                                            but the majority have suffered alteration in some look even slightly believable.
+                                        </p>
+                                        <button type="button"><span>Read more</span></button>
+                                    </div>
+                                </div>
+                            
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -910,7 +1595,7 @@
                     <p>The High Quality Products</p>
                 </div>
                 <!--end main-brands__title-->
-                <div class="main-brands__logo">
+                <div class="main-brands__logo owl-carousel owl-theme">
                     <div class="logo">
                         <a href="#"><img src="image/brand5.png" alt=""></a>
                     </div>
@@ -926,7 +1611,12 @@
                     <div class="logo">
                         <a href="#"><img src="image/brand9.png" alt=""></a>
                     </div>
-
+                    <div class="logo">
+                        <a href="#"><img src="image/brand5.png" alt=""></a>
+                    </div>
+                    <div class="logo">
+                        <a href="#"><img src="image/brand6.png" alt=""></a>
+                    </div>
                 </div>
                 <!--end main-brands__logo-->
             </div>
@@ -937,7 +1627,7 @@
             <div class="main-contact--content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 col-xs-12 main-contact__content--left">
+                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 main-contact__content--left">
                             <h2>Sign up for our Newsletter :-</h2>
                             <p>Be sure to follow our blog and sign up for all of our mailing updates! </p>
                             <div class="contact__form">
@@ -945,7 +1635,7 @@
                                 <button type="submit">Subscribe</button>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-xs-12 main-contact__content--right">
+                        <div class="col-lg-4 col-md-5 col-sm-12  col-xs-12 main-contact__content--right">
                             <h2>Follow me :-
                             </h2>
                             <p>Trusted by Millions of Websites Like Yours!
@@ -968,128 +1658,138 @@
             </div>
         </section>
         <!--end section main-contact-->
-     
+
     </main>
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
-                  <div class="row">
-                      <div class="col-lg-3 col-xs-6">
-                          <h2>Information
-                          </h2>
-                          <ul>
-                              <li><a href="#">About Us</a></li>
-                              <li><a href="#">Delivery Information</a></li>
-                              <li><a href="#">Privacy Policy</a></li>
-                              <li><a href="#">Terms & Conditions</a></li>
-                              <li><a href="#">Wish List</a></li>
-                              <li><a href="#">Gift Certificates</a></li>
-                              <li><a href="#">View Cart</a></li>
-                              <li><a href="#">Order History</a></li>
-                              <li><a href="#">Specials</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-3 col-xs-6">
-                          <h2>My Account
-                          </h2>
-                          <ul>
-                              <li><a href="#">Contact Us
-                              </a></li>
-                              <li><a href="#">My Account</a></li>
-                              <li><a href="#">Order History</a></li>
-                              <li><a href="#">Wish List</a></li>
-                              <li><a href="#">Newsletter</a></li>
-                              <li><a href="#">Gift Certificates</a></li>
-                              <li><a href="#">Brands</a></li>
-                              <li><a href="#">Specials</a></li>
-                              <li><a href="#">Affiliates</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-3 col-xs-6">
-                          <h2>Extras
-                          </h2>
-                          <ul>
-                              <li><a href="#">Delivery information</a></li>
-                              <li><a href="#">Privacy Policy</a></li>
-                              <li><a href="#">Terms & Conditions</a></li>
-                              <li><a href="#">Contact us</a></li>
-                              <li><a href="#">Sitemap</a></li>
-                              <li><a href="#">Product Recall</a></li>
-                              <li><a href="#">Gift Vouchers</a></li>
-                              <li><a href="#">Help & FAQs</a></li>
-                              <li><a href="#">Sale Only Today</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-lg-3 col-xs-6">
-                            <h2>Contact Us
-                            </h2>
-                            <div class="row">
-                                <div class="col-lg-1">
-                                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                                <div class="col-lg-11">
-                                    <p style="  color: #808080;">Offices Addresss: <br>
-                                        218,Drimlend Building <br>
-                                        Sarthana jakatnaka, Surat City <br>
-                                        Gujarat-395013 INDIA</p>
-                                </div>
-                                <div class="col-lg-1">
-                                    <span><i class="fa fa-envelope" aria-hidden="true"></i>
-      
-                                    </span>
-                                </div>
-                                <div class="col-lg-11">
-                                    <ul>
-                                        <li><a href="#">info@localhost.com</a></li>
-                                        <li><a href="#">your@domain.com</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-1">
-                                    <span><i class="fa fa-mobile" aria-hidden="true"></i>
-      
-                                    </span>
-                                </div>
-                                <div class="col-lg-11">
-                                    <ul>
-                                        <li>+91 0987-654-321</li>
-                                        <li>+91 0987-654-321</li>
-                                    </ul>
-                                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-xs-6">
+                        <h2>Information
+                        </h2>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Wish List</a></li>
+                            <li><a href="#">Gift Certificates</a></li>
+                            <li><a href="#">View Cart</a></li>
+                            <li><a href="#">Order History</a></li>
+                            <li><a href="#">Specials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <h2>My Account
+                        </h2>
+                        <ul>
+                            <li><a href="#">Contact Us
+                                </a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order History</a></li>
+                            <li><a href="#">Wish List</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Gift Certificates</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <h2>Extras
+                        </h2>
+                        <ul>
+                            <li><a href="#">Delivery information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Product Recall</a></li>
+                            <li><a href="#">Gift Vouchers</a></li>
+                            <li><a href="#">Help & FAQs</a></li>
+                            <li><a href="#">Sale Only Today</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <h2>Contact Us
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </span>
                             </div>
-                      </div>
-                  </div>
-            </div><!--end footer__top-->
-            <div class="footer__bottom">
-                  <div class="footer__bottom--nav">
-                      <nav class="footer-menu">
-                          <ul>
-                              <li><a href="#">Home</a></li>
-                              <li><a href="#">About</a></li>
-                              <li><a href="#">Work</a></li>
-                              <li><a href="#">Team</a></li>
-                              <li><a href="#">Pricing</a></li>
-                              <li><a href="#">Blog</a></li>
-                              <li><a href="#">Contact</a></li>
-                          </ul>
-                      </nav>
-                      <p>Copyright - <a href="#">Created by Leonode © 2017</a></p>
-                  </div><!--end footer__bottom--nav-->
-                  <div class="footer__bottom--logo">
-                      <ul>
-                          <li><a href="#"><img src="image/mastero.jpg" alt=""></a></li>
-                          <li><a href="#"><img src="image/visa.jpg" alt=""></a></li>
-                          <li><a href="#"><img src="image/currus.jpg" alt=""></a></li>
-                          <li><a href="#"><img src="image/discover.jpg" alt=""></a></li>
-                      </ul>
-                  </div>
+                            <div class="col-lg-11">
+                                <p style="  color: #808080;">Offices Addresss: <br>
+                                    218,Drimlend Building <br>
+                                    Sarthana jakatnaka, Surat City <br>
+                                    Gujarat-395013 INDIA</p>
+                            </div>
+                            <div class="col-lg-1">
+                                <span><i class="fa fa-envelope" aria-hidden="true"></i>
 
-            </div><!--end footer__bottom-->
-        </div><!--end container-->
-    </footer><!--end footer-->
+                                </span>
+                            </div>
+                            <div class="col-lg-11">
+                                <ul>
+                                    <li><a href="#">info@localhost.com</a></li>
+                                    <li><a href="#">your@domain.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-1">
+                                <span><i class="fa fa-mobile" aria-hidden="true"></i>
+
+                                </span>
+                            </div>
+                            <div class="col-lg-11">
+                                <ul>
+                                    <li>+91 0987-654-321</li>
+                                    <li>+91 0987-654-321</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end footer__top-->
+            <div class="footer__bottom">
+                <div class="footer__bottom--nav">
+                    <nav class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <p>Copyright - <a href="#">Created by Leonode © 2017</a></p>
+                </div>
+                <!--end footer__bottom--nav-->
+                <div class="footer__bottom--logo">
+                    <ul>
+                        <li><a href="#"><img src="image/mastero.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="image/visa.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="image/currus.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="image/discover.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--end footer__bottom-->
+        </div>
+        <!--end container-->
+    </footer>
+    <!--end footer-->
     <div class="page-home">
         <a class="page-home__scroll" href="#"></a>
     </div>
-</body>
 
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>

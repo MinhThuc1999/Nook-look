@@ -129,6 +129,9 @@
     .main-cms__banner{
         padding: 0px 100px;
     }
+    .main-contact .main-contact--content{
+        padding: 100px 70px !important;
+    }
 }
 /*
 Media query chung
@@ -228,5 +231,9 @@ Media query chung
         height: 40px;
         background: url('http://html.lionode.com/nature/n-look/image/sprite.png') no-repeat;
         background-size: cover;
+    }
+    .main-contact--content .main-contact__content--right{
+        margin-top: 20px;
+        padding-left: 10px !important;
     }
 }
